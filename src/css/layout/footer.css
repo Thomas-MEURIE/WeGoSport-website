@@ -1,15 +1,38 @@
 footer {
   color: var(--gray-white);
-  background-color: var(--gray-black);
+  background-color: var(--wgs-gray);
   background-clip: content-box;
   margin-top: 4px;
-  column-count: 2;
-  column-gap: 1em;
 }
 
-.footer_text {
-  padding-top: 40px;
-  padding-bottom: 40px;
+.downloads {
+  padding: 75px;
+}
+
+.downloads a {
+  margin-right: 20px;
+}
+
+.line {
+  margin-left: 5%;
+  width: 90%;
+  height: 1px;
+  border: 2px;
+  border-style: solid;
+  border-color: white;
+}
+
+.infos {
+  padding: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.infos a {
+  color: white;
+  font-size: var(--text-l);
+  text-align: center;
+  font-style: none;
 }
 
 .footer_text a {

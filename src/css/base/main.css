@@ -5,7 +5,6 @@
 }
 
 body {
-  z-index: 0;
   font-family: var(--font-sans-serif);
   font-size: var(--text-m);
   line-height: 1;
@@ -49,15 +48,18 @@ h2 {
 }
 
 h3 {
-  margin-top: 5rem;
+  margin-top: 12rem;
   font-size: var(--text-b);
   text-align: center;
 }
 
 h4 {
-  font-size: var(--text-m);
+  font-size: var(--text-b);
   text-align: center;
   font-weight: normal;
+  align-self: center;
+  height: 147px;
+  width: 1000px;
 }
 
 h5 {
@@ -71,19 +73,18 @@ p {
 }
 
 .entete_accueil {
-  width: 100%;
+	position: relative;
+  z-index: 6;
+  width: 60%;
   height: 648px;
-  background-image: url("../../../public/ui/Top.svg");
-  background-repeat: no-repeat;
-  background-position-y: -50px;
-  background-size: 100%;
-  color : var(--gray-white);
+  color : var(--gray-black);
   padding : 80px;
+  margin-top: -720px;
 }
 
 .entete_accueil h1 {
   text-align: left;
-  margin-right : 550px; 
+  margin-top : -500px;
 }
 
 .entete_accueil p {
@@ -91,28 +92,13 @@ p {
   margin-right : 600px;
 }
 
+
+
 .entete_accueil img {
-  margin-left : 200px;
-  margin-top : 180px;
-}
-
-.decompte {
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-}
-
-.decompte h4 {
-  font-family: var(--font-sans-serif);
-  font-size: var(--numbers-size);
-  color: var(--wgs-blue);
-  font-weight: bold;
-}
-
-.decompte h5 {
-  font-family: var(--font-title);
-  font-size: var(--title);
+  margin-left : -80px;
+  margin-top : -120px;
+  height: 760px;
+  width: auto;
 }
 
 #compte_a_rebours {
@@ -123,12 +109,37 @@ p {
   text-align: center;
 }
 
+#compte_unité {
+  font-family: var(--font-title);
+  font-size: var(--title);
+  text-align: center;
+  font-weight: bold;
+}
+
+.Triangle {
+  width: 100%;
+  margin-bottom: -30px;
+}
+
+.Triangle2 {
+  width: 100%;
+  margin-bottom: 30px;
+  transform: scale(-1);
+}
+
+.Bubble {
+  margin-top: -200px;
+  margin-bottom: -100px;
+  margin-left: 86px;
+}
+
 .presentation {
   background-color: var(--wgs-gray-bg);
   padding-top: 5rem;
 }
 
 .presentation_list {
+  padding-top: 20px;
   column-count: 2;
   align-content: center;
 }
@@ -138,20 +149,80 @@ p {
   justify-content: center;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .presentation_element p {
   margin: 103px;
 }
 
-.maquette h2 {
-  margin-left: 176px;
-  margin-right: 176px;
+.carrousel {
+	grid-column: 2;
+	grid-row: 2;
+	width: 100%;
+	padding: 0px;
+	position: relative;
+	overflow: hidden;
+}
+
+.droite {
+	grid-row: 2;
+	grid-column: 1;
+	width: 40px;
+}
+
+.images {
+	width: 100%; 
+	height: 760px;
+	left:0;
+}
+
+.images img{
+	width: 100%;
+	height: auto;
+}
+
+.image {
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: -1;
 }
 
 .maquette {
   padding-top: 50px;
-  background-image: url("../../../public/img/Phone_presentation.webp");
-  height: 1500px;
-  background-size: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 50%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.maquette_part {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.maquette_part h2{
+  width: 200%;
+  height: 175px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-weight: lighter;
+}
+
+#equipe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.membre {
+  width: 33%;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
 }

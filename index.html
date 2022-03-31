@@ -8,75 +8,113 @@
     <title>WeGoSport</title>
     <link rel="shortcut icon" type="image/ico" href="public/icon/favicon.ico"/>
     <link rel="icon" href="public/icon/favicon.ico">
+    
+    <script src="https://unpkg.com/alpinejs@3.2.2/dist/cdn.min.js"></script>
+    <script src="https://animejs.com/lib/anime.min.js"></script>
+    <script src="src/js/fonctions.js"></script>
 
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
     <header>
-        <a href="#">Accueil</a>
+        <img src="/public/ui/Logo.svg" alt="">
+        <div class="links">
+            <div class="local">
+                <a href="#"><p>Accueil</p></a>
+                <a href="#equipe"><p>Equipe</p></a>
+            </div>
+            <div class="header_downloads">
+                <a href="#"><img src="/public/ui/android.png" alt=""></a>
+                <a href="#"><img src="/public/ui/app store.png" alt=""></a>
+            </div>
+        </div>
     </header>
-    <div class="entete_accueil">
-        <h1>Organise des rencontres sportives.</h1>
-        <p>Finis les après-midi à jouer seul ou passer son temps à essayer  de trouver des joueurs avec qui jouer.</p>
+    <div class="droite">&nbsp;</div>
+    <div class="carrousel">
+        <div class="images">
+            <img id="img1" class="image" src="/public/img/Foot.webp"/>
+            <img id="img2" class="image" src="/public/img/Basket.webp"/>
+            <img id="img3" class="image" src="/public/img/Petanque.webp"/>
+            <img id="img4" class="image" src="/public/img/Volley.webp"/>
+        </div>
     </div>
+    <div class="entete_accueil" style="z-index: 6;">
+        <img src="/public/ui/Entete.svg" alt="">
+        <h1>Organise des rencontres sportives.</h1>
+        <p>Finis les après-midi à jouer seul ou passer son temps à essayer de trouver des joueurs avec qui jouer.</p>
+    </div>
+    <script>
+        carrousel();
+    </script>
     <h3>Temps restant avant l’ouverture du site :</h3>
-    <div id="compte_a_rebours"><noscript>Fin de l'évènement le 1er janvier 2018.</noscript></div>
-    <script type="text/javascript">
-        function compte_a_rebours()
-        {
-            var compte_a_rebours = document.getElementById("compte_a_rebours");
-        
-            var date_actuelle = new Date();
-            var date_evenement = new Date("Jun 8 12:00:00 2022");
-            var total_secondes = (date_evenement - date_actuelle) / 1000;
-            
-            if (total_secondes < 0)
-            {
-                compte_a_rebours.innerHTML = 'Compte à rebours terminé.';
-            }
-            else if (total_secondes > 0)
-            {
-                var jours = Math.floor(total_secondes / (60 * 60 * 24));
-                var heures = Math.floor((total_secondes - (jours * 60 * 60 * 24)) / (60 * 60));
-                minutes = Math.floor((total_secondes - ((jours * 60 * 60 * 24 + heures * 60 * 60))) / 60);
-                secondes = Math.floor(total_secondes - ((jours * 60 * 60 * 24 + heures * 60 * 60 + minutes * 60)));
-        
-                compte_a_rebours.innerHTML = jours + ' : ' + heures + ' : ' + minutes + ' : ' + secondes;
-            }
-        
-            var actualisation = setTimeout("compte_a_rebours();", 1000);
-        }
+    <div id="compte_a_rebours"><noscript>Sortie de l'application le 8 juin 2022.</noscript></div>
+    <div id="compte_unité"></div>
+    <script>
         compte_a_rebours();
     </script>
-    <div class="decompte">
-        <div class="compteur">
-            <h5>Jours</h5>
-        </div>
-        <div class="compteur">
-            <h5>Heures</h5>
-        </div>
-        <div class="compteur">
-            <h5>Minutes</h5>
-        </div>
-        <div class="compteur">
-            <h5>Secondes</h5>
-        </div>
-    </div>
-    <img src="/public/ui/Bubble.svg" alt="">
+    <img class="Triangle" src="/public/ui/Transition.svg" alt="">
+    <img class="Bubble" src="/public/ui/Bubble.svg" alt="">
     <div class="presentation">
-        <h2>Trouve des partenaires de sport aux alentours de chez toi, donne un lieu, une heure pour vous retrouvez et commencez à vous dépensez dans une bonne ambiance !</h2>
+        <h2>Trouve des partenaires de sport aux alentours de chez toi, donne un lieu, une heure pour vous retrouver et commencez à vous dépenser dans une bonne ambiance !</h2>
         <div class="presentation_list">
-            <div class="presentation_element"><img src="/public/img/Money.svg" alt=""></div>
+            <div class="presentation_element"><img src="/public/img/Free.webp" alt=""></div>
             <div class="presentation_element"><p>Un esprit de communauté pour entreprendre des matchs et partager nos expériences, partager de bon moments et s’ammeliorer en continu.</p></div>
-            <div class="presentation_element"><img src="/public/img/Sports.svg" alt=""></div>
-            <div class="presentation_element"><p>Nous proposons des service entièrement gratuit. L’acces à tout nos service librement et facilement.</p></div>
-            <div class="presentation_element"><img src="/public/img/People.svg" alt=""></div>
-            <div class="presentation_element"><p>Une diversité de sport est déja proposé, entre le football, basketballl, volley ball et pétanque. Cela ravivera les tout les âges et tout les loisirs. D’autre sport pouront être aussi proposés.</p></div>
+            <div class="presentation_element"><img src="/public/img/Sports.webp" alt=""></div>
+            <div class="presentation_element"><p>Nous partons sur le principe que faire du sport doit être accessible à tous. Le fait de devoir payer pour pratiquer du sport n’est pas concevable pour WeGoSport. Pour cela nous vous mettons à disposition nos services entièrement gratuits. </p></div>
+            <div class="presentation_element"><img src="/public/img/People.webp" alt=""></div>
+            <div class="presentation_element"><p>Nous proposons 4 sports pour trouver des partenaires.  Il y a le football, le basket-ball, le volley-ball et la pétanque. Nous avons choisi ces 4 sports qui font partie des plus pratiqués en France et de plus les plus accessibles gratuitement en plein air. Par la suite s’il y a une forte demande pour un sport, nous envisagerons de le rajouter le plus rapidement possible.</p></div>
         </div>
     </div>
+    <img class="Triangle2" src="/public/ui/Transition.svg" alt="">
+    <h1>Nos fonctionnalités</h1>
     <div class="maquette">
-        <h2>Tu peux Créer et Rejoindre des rencontres sportives tout en gérant ton Profil !</h2>
+        <div class="maquette_part">
+            <h2>Tu peux <b>rechercher</b> et <b>organisez</b> des rencontres sportives sur ton <b>terrain</b> le plus proche !</h2>
+            <img src="/public/img/Présentation-1.webp" alt="Créer un évenement">
+        </div>
+        <div class="maquette_part">
+            <h2><b>Rejoint</b> les matchs déjà <b>créés</b> par les autres utilisateurs. </h2>
+            <img src="/public/img/Présentation-2.webp" alt="Créer un évenement">
+        </div>
+        <div class="maquette_part">
+            <h2>À la <b>création</b> de ton match tu peux <b>personnaliser</b> le type de match, le <b>sport</b> et précisez une <b>date</b> pour la rencontre.</h2>
+            <img src="/public/img/Présentation-3.webp" alt="Créer un évenement">
+        </div>
+        <div class="maquette_part">
+            <h2>Possibilité <b>d’ajouter</b> des <b>amis</b> sur l’application.</h2>
+            <img src="/public/img/Présentation-4.webp" alt="Créer un évenement">
+        </div>
     </div>
-    <footer></footer>
+    <h1>Notre équipe</h1>
+    <p class="center">Nous sommes 3 étudiant en première année au MMi de Montbéliard, nous réalisons cette application dans le but d’un projet. </p>
+    <div id="equipe">
+        <div class="membre">
+            <img src="/public/img/Tmeurie.png" alt="Créer un évenement">
+            <h2>THOMAS MEURIE</h2>
+            <p>Fondateur - développeur</p>
+        </div>
+        <div class="membre">
+            <img src="/public/img/Ssedira.png" alt="Créer un évenement">
+            <h2>SOUHAYL SEDIRA</h2>
+            <p>Fondateur - designer, CMO</p>
+        </div>
+        <div class="membre">
+            <img src="/public/img/Vtholomier.png" alt="Créer un évenement">
+            <h2>VALENTIN THOLOMIER</h2>
+            <p>Fondateur - designer, CMO</p>
+        </div>
+    </div>
+    <footer>
+        <div class="downloads">
+            <a href="#"><img src="/public/ui/android.png" alt=""></a>
+            <a href="#"><img src="/public/ui/app store.png" alt=""></a>
+        </div>
+        <div class="line">
+        </div>
+        <div class="infos">
+            <a href="#">Mentions légales</a>
+            <a href="#"><img src="/public/ui/BUTMMI.png" alt=""></a>
+        </div>
+    </footer>
 </body>
 </html>

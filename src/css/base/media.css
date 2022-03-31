@@ -12,12 +12,6 @@ figcaption {
   color: var(--gray-600);
 }
 
-.entete_accueil img:first-child {
-  margin-top: 50px;
-  width: 203px;
-  height: auto;
-}
-
 .illustration_articles {
   max-width: 50%;
   height: auto;
@@ -40,10 +34,14 @@ figcaption {
   margin-top: 10px;
 }
 
-.folder_accueil {
-  position: relative;
-  width: 325px;
-  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0));
-  margin-top: -60px;
-  z-index: 5;
+.maquette_part img {
+  height: 100%;
+  width: 100%;
+  margin-top: -600px;
+  transform: scale(0.5);
+}
+
+.membre img {
+  transform: scale(0.7);
+  margin-bottom: -100px;
 }
