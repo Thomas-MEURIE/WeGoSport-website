@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WeGoSport</title>
+    <link rel="shortcut icon" type="image/ico" href="public/icon/favicon.ico"/>
+    <link rel="icon" href="public/icon/favicon.ico">
+
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <header>
+        <a href="#">Accueil</a>
+    </header>
+    <div class="entete_accueil">
+        <h1>Organise des rencontres sportives.</h1>
+        <p>Finis les après-midi à jouer seul ou passer son temps à essayer  de trouver des joueurs avec qui jouer.</p>
+    </div>
+    <h3>Temps restant avant l’ouverture du site :</h3>
+    <div id="compte_a_rebours"><noscript>Fin de l'évènement le 1er janvier 2018.</noscript></div>
+    <script type="text/javascript">
+        function compte_a_rebours()
+        {
+            var compte_a_rebours = document.getElementById("compte_a_rebours");
+        
+            var date_actuelle = new Date();
+            var date_evenement = new Date("Jun 8 12:00:00 2022");
+            var total_secondes = (date_evenement - date_actuelle) / 1000;
+            
+            if (total_secondes < 0)
+            {
+                compte_a_rebours.innerHTML = 'Compte à rebours terminé.';
+            }
+            else if (total_secondes > 0)
+            {
+                var jours = Math.floor(total_secondes / (60 * 60 * 24));
+                var heures = Math.floor((total_secondes - (jours * 60 * 60 * 24)) / (60 * 60));
+                minutes = Math.floor((total_secondes - ((jours * 60 * 60 * 24 + heures * 60 * 60))) / 60);
+                secondes = Math.floor(total_secondes - ((jours * 60 * 60 * 24 + heures * 60 * 60 + minutes * 60)));
+        
+                compte_a_rebours.innerHTML = jours + ' : ' + heures + ' : ' + minutes + ' : ' + secondes;
+            }
+        
+            var actualisation = setTimeout("compte_a_rebours();", 1000);
+        }
+        compte_a_rebours();
+    </script>
+    <div class="decompte">
+        <div class="compteur">
+            <h5>Jours</h5>
+        </div>
+        <div class="compteur">
+            <h5>Heures</h5>
+        </div>
+        <div class="compteur">
+            <h5>Minutes</h5>
+        </div>
+        <div class="compteur">
+            <h5>Secondes</h5>
+        </div>
+    </div>
+    <img src="/public/ui/Bubble.svg" alt="">
+    <div class="presentation">
+        <h2>Trouve des partenaires de sport aux alentours de chez toi, donne un lieu, une heure pour vous retrouvez et commencez à vous dépensez dans une bonne ambiance !</h2>
+        <div class="presentation_list">
+            <div class="presentation_element"><img src="/public/img/Money.svg" alt=""></div>
+            <div class="presentation_element"><p>Un esprit de communauté pour entreprendre des matchs et partager nos expériences, partager de bon moments et s’ammeliorer en continu.</p></div>
+            <div class="presentation_element"><img src="/public/img/Sports.svg" alt=""></div>
+            <div class="presentation_element"><p>Nous proposons des service entièrement gratuit. L’acces à tout nos service librement et facilement.</p></div>
+            <div class="presentation_element"><img src="/public/img/People.svg" alt=""></div>
+            <div class="presentation_element"><p>Une diversité de sport est déja proposé, entre le football, basketballl, volley ball et pétanque. Cela ravivera les tout les âges et tout les loisirs. D’autre sport pouront être aussi proposés.</p></div>
+        </div>
+    </div>
+    <div class="maquette">
+        <h2>Tu peux Créer et Rejoindre des rencontres sportives tout en gérant ton Profil !</h2>
+    </div>
+    <footer></footer>
+</body>
+</html>

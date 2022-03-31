@@ -1,0 +1,142 @@
+.menu {
+  background-color: var(--afw-gray);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: fixed;
+  margin-top: -800px;
+  list-style: none;
+  width: 100%;
+  align-items: flex-start;
+  text-decoration-color: var(--gray-white);
+  border: 0;
+  border-radius: 0 0 25px 25px;
+  position: relative;
+}
+
+.menu_top {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  height: 71px;
+}
+
+.close_button {
+  width: 71px;
+  height: 71px;
+  border-right: 2px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  filter: invert(100%);
+}
+
+.icon {
+  align-self: center;
+  margin-top: 8px;
+}
+
+.icon img{
+  height: 56px;
+  filter: invert(100%);
+}
+
+.menu-btn__bar{
+  content: "";
+  width: 100%;
+  background-color: var(--gray-white);
+  height: 2px;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+}
+
+.menu ul {
+  color: white;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  border-bottom-right-radius: 25;
+  border-bottom-left-radius: 25;
+  z-index: 2;
+}
+
+.menu li {
+  width: 100%;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 0px 0 0 0px;
+}
+
+.menu p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.menu_element, .menu_curent {
+  width: 100%;
+  height: 62px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu_category {
+  width: 100%;
+  height: 203px;
+  list-style: circle;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 19px;
+}
+
+.menu_sous_element {
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 100%;
+  height: 46.5px;
+}
+
+.menu_lang_selec {
+  width: 128px;
+  height: 71px;
+  padding: 0pt;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.menu_lang {
+  padding-top: 9px;
+  width: 64px;
+  height: 71px;
+  border-left: 2px solid white;
+}
+
+.menu_lang a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.menu_lang p {
+  margin-top: 5px;
+  text-align: center;
+}

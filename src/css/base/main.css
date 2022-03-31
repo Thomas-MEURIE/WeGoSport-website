@@ -1,0 +1,157 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  z-index: 0;
+  font-family: var(--font-sans-serif);
+  font-size: var(--text-m);
+  line-height: 1;
+  background-color: var(--afw-light);
+}
+
+.main_page {
+  margin-top: 71px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+p, h1, h2, h3, h4, h5 {
+  padding-left: 17px;
+  padding-right: 17px;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-family: var(--font-title);
+  font-size: var(--title);
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+h1, h5 {
+  font-weight: bold;
+  text-align: center;
+}
+
+h3, p {
+  width: 100%;
+}
+
+h2 {
+  margin-top: 5rem;
+  font-size: var(--text-l);
+  text-align: center;
+}
+
+h3 {
+  margin-top: 5rem;
+  font-size: var(--text-b);
+  text-align: center;
+}
+
+h4 {
+  font-size: var(--text-m);
+  text-align: center;
+  font-weight: normal;
+}
+
+h5 {
+  font-size: var(--subtitle);
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+p {
+  font-size: var(--text-m);
+}
+
+.entete_accueil {
+  width: 100%;
+  height: 648px;
+  background-image: url("../../../public/ui/Top.svg");
+  background-repeat: no-repeat;
+  background-position-y: -50px;
+  background-size: 100%;
+  color : var(--gray-white);
+  padding : 80px;
+}
+
+.entete_accueil h1 {
+  text-align: left;
+  margin-right : 550px; 
+}
+
+.entete_accueil p {
+  text-align: left;
+  margin-right : 600px;
+}
+
+.entete_accueil img {
+  margin-left : 200px;
+  margin-top : 180px;
+}
+
+.decompte {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.decompte h4 {
+  font-family: var(--font-sans-serif);
+  font-size: var(--numbers-size);
+  color: var(--wgs-blue);
+  font-weight: bold;
+}
+
+.decompte h5 {
+  font-family: var(--font-title);
+  font-size: var(--title);
+}
+
+#compte_a_rebours {
+  font-family: var(--font-sans-serif);
+  font-size: var(--numbers-size);
+  color: var(--wgs-blue);
+  font-weight: bold;
+  text-align: center;
+}
+
+.presentation {
+  background-color: var(--wgs-gray-bg);
+  padding-top: 5rem;
+}
+
+.presentation_list {
+  column-count: 2;
+  align-content: center;
+}
+
+.presentation_element {
+  height: 349px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.presentation_element p {
+  margin: 103px;
+}
+
+.maquette h2 {
+  margin-left: 176px;
+  margin-right: 176px;
+}
+
+.maquette {
+  padding-top: 50px;
+  background-image: url("../../../public/img/Phone_presentation.webp");
+  height: 1500px;
+  background-size: 100%;
+}

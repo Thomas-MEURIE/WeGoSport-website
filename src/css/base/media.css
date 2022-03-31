@@ -1,0 +1,49 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+}
+
+.entete_accueil img:first-child {
+  margin-top: 50px;
+  width: 203px;
+  height: auto;
+}
+
+.illustration_articles {
+  max-width: 50%;
+  height: auto;
+}
+
+.img_galerie {
+  max-width: 80%;
+  background-color: var(--gray-800);
+  margin-bottom: 40px;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+}
+
+.img_galerie:first-child{
+  margin-top: 30px;
+}
+
+.img_galerie p{
+  margin-top: 10px;
+}
+
+.folder_accueil {
+  position: relative;
+  width: 325px;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0));
+  margin-top: -60px;
+  z-index: 5;
+}
